@@ -1,0 +1,8 @@
+{
+  "/device-api": {
+    "target": "https://devices.noppe.nl",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

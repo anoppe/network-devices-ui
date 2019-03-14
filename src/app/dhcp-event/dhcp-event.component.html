@@ -1,0 +1,27 @@
+<p>
+  Client Events ({{dhcpEvents.length}})
+</p>
+<div class="text-center" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<div class="col-6">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Datetime</th>
+      <th scope="col">Action</th>
+      <th scope="col">IP address</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="!loading" >
+      <tr *ngFor="let event of dhcpEvents">
+        <td>{{event.timestamp}}</td>
+        <td>{{event.operation}}</td>
+        <td>{{event.ipAddress}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
