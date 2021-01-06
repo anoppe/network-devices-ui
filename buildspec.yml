@@ -10,4 +10,4 @@ phases:
   post_build:
     commands:
       - aws s3 sync dist/network-devices-ui s3://$BUCKET_NAME/device --delete
-#      - aws cloudfront create-invalidation --distribution-id "CLOUDFRONT_ID" --paths '/*'
+      - aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_ID" --paths '/*'
